@@ -1,0 +1,21 @@
+{
+  "name": "rest-api-s3",
+  "version": "1.0.0",
+  "description": "API for semester 3 web project in IUT of Belfort-Montbéliard",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Nathan BLIND HEITZ",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "swagger-ui-express": "^4.1.6"
+  }
+}
