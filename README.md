@@ -45,10 +45,10 @@ or the default port (3000), you have to change this following line in file
 
 ```
 "servers": [
-    {
-      "url": "http://localhost:3000/api"
-    }
-  ],
+  {
+    "url": "http://localhost:3000/api"
+  }
+],
 ```
 
 ## License
