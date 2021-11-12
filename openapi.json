@@ -795,26 +795,36 @@
                       "properties": {
                         "productCode": {
                           "type": "string",
-                          "example": "S10_1678",
                           "required": true
                         },
                         "quantityOrdered": {
                           "type": "integer",
-                          "example": "10",
                           "required": true
                         },
                         "priceEach": {
                           "type": "number",
-                          "example": "5.95",
                           "required": true
                         },
                         "orderLineNumber": {
                           "type": "integer",
-                          "example": "3",
                           "required": true
                         }
                       }
                     },
+                    "example": [
+                      {
+                        "productCode": "S10_1678",
+                        "quantityOrdered": 10,
+                        "priceEach": 5.95,
+                        "orderLineNumber": 3
+                      },
+                      {
+                        "productCode": "S10_1949",
+                        "quantityOrdered": 5,
+                        "priceEach": 59.99,
+                        "orderLineNumber": 2
+                      }
+                    ],
                     "uniqueItems": true
                   }
                 }
