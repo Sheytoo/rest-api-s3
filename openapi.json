@@ -738,6 +738,100 @@
         }
       }
     },
+    "/orders/customers/{customerId}/insert-products": {
+      "post": {
+        "tags": [
+          "orders"
+        ],
+        "summary": "Create order for customer with products",
+        "parameters": [
+          {
+            "name": "customerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "order": {
+                    "type": "object",
+                    "properties": {
+                      "orderNumber": {
+                        "type": "integer",
+                        "example": "1112",
+                        "required": true
+                      },
+                      "orderDate": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2021-10-02",
+                        "required": true
+                      },
+                      "requiredDate": {
+                        "type": "string",
+                        "format": "date",
+                        "example": "2021-11-03",
+                        "required": true
+                      },
+                      "status": {
+                        "type": "string",
+                        "example": "Shipped",
+                        "required": true
+                      }
+                    }
+                  },
+                  "products": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "productCode": {
+                          "type": "string",
+                          "example": "S10_1678",
+                          "required": true
+                        },
+                        "quantityOrdered": {
+                          "type": "integer",
+                          "example": "10",
+                          "required": true
+                        },
+                        "priceEach": {
+                          "type": "number",
+                          "example": "5.95",
+                          "required": true
+                        },
+                        "orderLineNumber": {
+                          "type": "integer",
+                          "example": "3",
+                          "required": true
+                        }
+                      }
+                    },
+                    "uniqueItems": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          },
+          "500": {
+            "description": "Unable to create and/or insert data"
+          }
+        }
+      }
+    },
     "/payments/year/{year}/best-month": {
       "get": {
         "tags": [

@@ -13,6 +13,21 @@ exports.findAllProductsForOrder = (id) => {
                                  WHERE orderNumber = ?`, [id]);
 }
 
+exports.insertOrder = (id, data) => {
+    return generateQueryPromise(`INSERT INTO orders (orderNumber, orderDate, requiredDate, shippedDate, status, comments,
+                                                     customerNumber)
+                                 VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [
+            data.orderNumber,
+            data.orderDate,
+            data.requiredDate,
+            data.shippedDate || null,
+            data.status,
+            data.comments || null,
+            id
+        ]);
+}
+
 exports.insertProductIntoOrder = (orderId, productId, data) => {
     return generateQueryPromise(`INSERT INTO orderdetails (orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber)
                                  VALUES (?, ?, ?, ?, ?)`,

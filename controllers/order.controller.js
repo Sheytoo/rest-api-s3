@@ -1,6 +1,7 @@
 const {findOneOrder, findAllProductsForOrder, insertProductIntoOrder, deleteProductFromOder,
-    updateProductQuantityFromOrder
+    updateProductQuantityFromOrder, insertOrder
 } = require("../services/order.service");
+const {findOneProduct} = require("../services/product.service");
 
 exports.getAllProductsForOrder = async (req, res) => {
     try {
@@ -63,5 +64,16 @@ exports.updateProductQuantityFromOrder = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).json({success: false, error: {code: 500, message: 'Unable to update data'}});
+    }
+}
+
+exports.createOrderForCustomerWithProducts = async (req, res) => {
+    try {
+        await insertOrder(req.params.customerId, req.body.order);
+        req.body.products.forEach(product => insertProductIntoOrder(req.body.order.orderNumber, product.productCode, product));
+        res.status(200).json({success: true, data: 'Successful products inserts into new order'});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({success: false, error: {code: 500, message: 'Unable to create and/or insert data'}});
     }
 }
