@@ -53,8 +53,8 @@ npm start
 ```
 
 ## Auth & Session
-To logout from session after a connexion to access to the swagger documentation,
-you have to use this URL path: `/api-docs/logout`
+To logout from session after login or register to access to the swagger
+documentation, you have to use this URL path: `/api-docs/logout`.
 
 ## Documentation (Swagger)
 The documentation can be find directly in the API using `/api-docs` URL path.
