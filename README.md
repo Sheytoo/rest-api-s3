@@ -6,6 +6,8 @@ API for semester 3 web project in IUT of Belfort-Montbéliard.
 
 - [Node.js](https://nodejs.org/)
 - [MySQL](https://www.mysql.com/)
+- [Google API access](https://console.cloud.google.com/apis/)
+- [Facebook API access](https://developers.facebook.com/)
 - [Postman](https://www.postman.com/) (Optional)
 
 ## Install
@@ -30,11 +32,18 @@ Create and open `.env` file in the project directory then edit it with your sett
 
 ```properties
 APP_PORT=3000
+
 DB_HOSTNAME=localhost
 DB_PORT=3306
 DB_DATABASE=companydb
 DB_USER=root
 DB_PASSWD=
+
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+FACEBOOK_APP_ID=
+FACEBOOK_APP_SECRET=
 ```
 
 ## Running the project
@@ -42,6 +51,10 @@ DB_PASSWD=
 ```bash
 npm start
 ```
+
+## Auth & Session
+To logout from session after a connexion to access to the swagger documentation,
+you have to use this URL path: `/api-docs/logout`
 
 ## Documentation (Swagger)
 The documentation can be find directly in the API using `/api-docs` URL path.
