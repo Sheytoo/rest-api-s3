@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "API WEB S3",
-    "description": "API for semester 3 web project in IUT of Belfort-Montbéliard",
+    "description": "API for semester 3 web project in IUT of Belfort-Montbéliard.",
     "contact": {
       "name": "Nathan BLIND HEITZ"
     },

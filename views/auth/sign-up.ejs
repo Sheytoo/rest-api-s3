@@ -1,0 +1,37 @@
+<%- include('../header') %>
+<body>
+<div class="main">
+    <div class="title">Sign Up</div>
+    <% if (errors.length > 0) { %>
+        <div class="alert"><i class="fas fa-exclamation"></i><%- errors %></div>
+    <% } %>
+    <form method="post">
+        <div class="input">
+            <input type="text" name="firstName" placeholder="Firstname" required>
+            <div class="icon"><i class="fas fa-address-card"></i></div>
+        </div>
+        <div class="input">
+            <input type="text" name="lastName" placeholder="Lastname" required>
+            <div class="icon"><i class="fas fa-address-card"></i></div>
+        </div>
+        <div class="input">
+            <input type="email" name="email" placeholder="Email" required>
+            <div class="icon"><i class="fas fa-at"></i></div>
+        </div>
+        <div class="input">
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="icon"><i class="fas fa-lock"></i></div>
+        </div>
+        <div class="input button">
+            <input type="submit" value="Register">
+        </div>
+        <div class="signup">
+            Already register? <a href="/api-docs/auth/sign-in">Login now</a>
+        </div>
+    </form>
+    <div class="socials">
+        <a href="/api-docs/auth/google"><i class="fab fa-google"></i><span>Google</span></a>
+        <a href="/api-docs/auth/facebook"><i class="fab fa-facebook-f"></i> <span>Facebook</span></a>
+    </div>
+</div>
+</body>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: #efefef;
+}
+
+.main {
+    width: 365px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.main .title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.main .socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.socials a {
+    display: block;
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
+.socials a span {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.socials a:first-child {
+    margin-right: 5px;
+    background: #DB4437;
+}
+
+.socials a:first-child:hover {
+    background: #c23c31;
+}
+
+.socials a:last-child {
+    margin-left: 5px;
+    background: #4267B2;
+}
+
+.socials a:last-child:hover {
+    background: #375695;
+}
+
+form {
+    margin-top: 25px;
+}
+
+form .input {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+}
+
+.input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 45px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.input input:focus {
+    border-color: #2eb4dd;
+}
+
+.input .icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: grey;
+}
+
+form .option_div {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button input {
+    padding-left: 0;
+    background: #2eb4dd;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.button input:hover {
+    background: #209fc5;
+}
+
+form .signup {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup a {
+    color: #2eb4dd;
+}
+
+form a {
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #ff4757;
+    background-color: rgba(255, 71, 87, .4);
+}
+
+.alert i {
+    margin-right: 10px;
+}
