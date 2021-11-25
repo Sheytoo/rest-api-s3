@@ -4,11 +4,14 @@ const passport = require('passport');
 const flash = require('connect-flash');
 const apiRouter = require('./routes/api.route');
 const docRouter = require('./routes/doc.route');
+const cors = require('cors');
 require('dotenv').config();
 require('./config/passport')(passport);
 
 const app = express();
 const port = process.env.APP_PORT ?? 3000;
+
+app.use(cors());
 
 app.use(session({secret: 'restapi', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
